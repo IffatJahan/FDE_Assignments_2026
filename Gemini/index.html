@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ApexFDE — Forward Deployed Engineering</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#312e81',
+              accent: '#06b6d4'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center font-bold text-white text-lg">
+          A
+        </div>
+        <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+          Apex<span class="text-brand-500">FDE</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#about-fde" class="hover:text-white transition-colors">What is FDE?</a>
+        <a href="#services" class="hover:text-white transition-colors">Services</a>
+        <a href="#workflow" class="hover:text-white transition-colors">Process</a>
+        <a href="#why-us" class="hover:text-white transition-colors">Why FDE</a>
+        <a href="#tech" class="hover:text-white transition-colors">Tech Stack</a>
+        <a href="#benefits" class="hover:text-white transition-colors">Benefits</a>
+      </nav>
+
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="#contact" class="px-4 py-2 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-500 rounded-lg shadow-lg shadow-brand-600/20 transition-all">
+          Deploy a Squad
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-400 hover:text-white" aria-label="Toggle Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-slate-800 bg-slate-900/95 backdrop-blur-lg px-4 pt-2 pb-6 space-y-3">
+      <a href="#about-fde" class="block text-slate-300 hover:text-white text-base font-medium">What is FDE?</a>
+      <a href="#services" class="block text-slate-300 hover:text-white text-base font-medium">Services</a>
+      <a href="#workflow" class="block text-slate-300 hover:text-white text-base font-medium">Process</a>
+      <a href="#why-us" class="block text-slate-300 hover:text-white text-base font-medium">Why FDE</a>
+      <a href="#tech" class="block text-slate-300 hover:text-white text-base font-medium">Tech Stack</a>
+      <a href="#benefits" class="block text-slate-300 hover:text-white text-base font-medium">Benefits</a>
+      <a href="#contact" class="inline-block w-full text-center px-4 py-2.5 text-sm font-semibold text-white bg-brand-600 rounded-lg">
+        Deploy a Squad
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-16">
+    <!-- 1. HERO SECTION -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-brand-900/40 via-slate-950 to-slate-950 -z-10"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs font-medium text-slate-300 mb-8 backdrop-blur-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          <span>Forward Deployed Taskforces Available for Q4</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+          Embedded Engineers for <br class="hidden sm:inline" />
+          <span class="bg-gradient-to-r from-brand-500 via-brand-accent to-emerald-400 bg-clip-text text-transparent">
+            Enterprise Deployment
+          </span>
+        </h1>
+
+        <!-- Supporting Text -->
+        <p class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed">
+          We embed senior engineers directly inside customer environments to solve complex architecture blockages, build custom integrations, and accelerate production go-lives.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <a href="#contact" class="w-full sm:w-auto px-8 py-4 text-base font-semibold text-white bg-brand-600 hover:bg-brand-500 rounded-xl shadow-xl shadow-brand-600/25 transition-all transform hover:-translate-y-0.5">
+            Deploy a Squad
+          </a>
+          <a href="#calculator" class="w-full sm:w-auto px-8 py-4 text-base font-semibold text-slate-300 hover:text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl transition-all">
+            Calculate Saved Time
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. EXPLANATION OF THE FDE ROLE -->
+    <section id="about-fde" class="py-20 bg-slate-900/40 border-y border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-500 mb-2">Understanding Forward Deployed Engineering</h2>
+            <h3 class="text-3xl font-bold text-white sm:text-4xl mb-6">Bridging the Gap Between Product and Enterprise Reality</h3>
+            <p class="text-slate-300 leading-relaxed mb-4">
+              Forward Deployed Engineers (FDEs) operate at the intersection of technical architecture, software delivery, and customer success. Unlike traditional consultants who deliver advisory decks, FDEs write production code inside your customer’s codebase and cloud environments.
+            </p>
+            <p class="text-slate-400 leading-relaxed mb-6">
+              They eliminate implementation friction by acting as dedicated technical commandos—handling edge-case integrations, air-gapped deployments, and complex security policies without draining your core product team.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                <p class="text-brand-accent font-bold text-lg mb-1">Code-First Execution</p>
+                <p class="text-xs text-slate-400">Directly committing code to customer repos and cloud accounts.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                <p class="text-brand-accent font-bold text-lg mb-1">High Empathy & Context</p>
+                <p class="text-xs text-slate-400">Navigating enterprise politics, compliance, and legacy stack friction.</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl relative">
+            <div class="text-xs font-mono text-slate-400 mb-4 pb-2 border-b border-slate-800 flex justify-between">
+              <span>fde_deployment_matrix.ts</span>
+              <span class="text-emerald-400">● LIVE IN PRODUCTION</span>
+            </div>
+            <pre class="font-mono text-xs text-slate-300 leading-relaxed overflow-x-auto"><code><span class="text-purple-400">interface</span> <span class="text-yellow-300">FDEMission</span> {
+  clientVPC: <span class="text-emerald-400">"AWS GovCloud"</span>;
+  airGapped: <span class="text-blue-400">true</span>;
+  securityCompliance: [<span class="text-emerald-400">"FedRAMP High"</span>, <span class="text-emerald-400">"SOC2 Type II"</span>];
+  primaryObjective: <span class="text-emerald-400">"Zero-Downtime Data Pipeline Sync"</span>;
+}
+
+<span class="text-purple-400">async function</span> <span class="text-blue-400">executeDeployment</span>(squad: FDESquad) {
+  <span class="text-purple-400">await</span> squad.auditInfrastructure();
+  <span class="text-purple-400">await</span> squad.buildCustomConnectors();
+  <span class="text-purple-400">await</span> squad.shipToProduction();
+  <span class="text-purple-400">return</span> <span class="text-emerald-400">"POC Converted to 7-Figure Contract"</span>;
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SERVICES / CAPABILITIES -->
+    <section id="services" class="py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-500">Core Capabilities</h2>
+          <p class="mt-2 text-3xl font-bold text-white sm:text-4xl">What Our FDE Teams Deliver</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all group">
+            <div class="w-12 h-12 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Custom Integrations</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">We build bespoke connectors, APIs, and middleware directly inside client VPCs or hybrid cloud infrastructures.</p>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all group">
+            <div class="w-12 h-12 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">PoC Acceleration</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Turn high-friction enterprise pilots into production contracts in weeks instead of quarters.</p>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all group">
+            <div class="w-12 h-12 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Security & Compliance</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Hands-on engineering for air-gapped deployments, FedRAMP, HIPAA, and strict enterprise SOC2 controls.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. STEP-BY-STEP ENGAGEMENT PROCESS -->
+    <section id="workflow" class="py-24 bg-slate-900/30 border-t border-slate-800/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-accent">Step-by-Step Engagement</h2>
+          <p class="mt-2 text-3xl font-bold text-white sm:text-4xl">How We Embed & Execute</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+          <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800">
+            <span class="text-xs font-bold text-brand-500">PHASE 01</span>
+            <h4 class="text-lg font-bold text-white mt-2 mb-2">Scope & Audit</h4>
+            <p class="text-xs text-slate-400">Map architecture dependencies, security rules, and integration blockers in under 48 hours.</p>
+          </div>
+          <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800">
+            <span class="text-xs font-bold text-brand-500">PHASE 02</span>
+            <h4 class="text-lg font-bold text-white mt-2 mb-2">Embed Squad</h4>
+            <p class="text-xs text-slate-400">FDEs gain environment access, join your communication channels, and start writing code.</p>
+          </div>
+          <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800">
+            <span class="text-xs font-bold text-brand-500">PHASE 03</span>
+            <h4 class="text-lg font-bold text-white mt-2 mb-2">Ship & Unblock</h4>
+            <p class="text-xs text-slate-400">Build custom connectors, resolve edge-case pipeline errors, and ship directly to client production.</p>
+          </div>
+          <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800">
+            <span class="text-xs font-bold text-brand-500">PHASE 04</span>
+            <h4 class="text-lg font-bold text-white mt-2 mb-2">Enable & Handoff</h4>
+            <p class="text-xs text-slate-400">Provide thorough documentation, train client operators, and transition long-term ownership smoothly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. WHY CHOOSE AN FDE -->
+    <section id="why-us" class="py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-500">Why Choose FDE</h2>
+          <p class="mt-2 text-3xl font-bold text-white sm:text-4xl">Forward Deployed vs. Traditional Alternatives</p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm text-slate-300 bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden">
+            <thead class="bg-slate-900 text-white text-xs uppercase tracking-wider border-b border-slate-800">
+              <tr>
+                <th class="py-4 px-6">Model</th>
+                <th class="py-4 px-6">Deployment Speed</th>
+                <th class="py-4 px-6">Technical Depth</th>
+                <th class="py-4 px-6">Core Team Friction</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800">
+              <tr>
+                <td class="py-4 px-6 font-semibold text-white">Apex Forward Deployed Engineers</td>
+                <td class="py-4 px-6 text-emerald-400 font-bold">&lt; 48 Hours</td>
+                <td class="py-4 px-6 text-slate-200">Senior Full-Stack & Systems Architecture</td>
+                <td class="py-4 px-6 text-emerald-400 font-bold">Zero Interruptions</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-medium text-slate-400">In-House Enterprise Hiring</td>
+                <td class="py-4 px-6 text-red-400">3-6 Months</td>
+                <td class="py-4 px-6 text-slate-400">High, but slow Ramp Up</td>
+                <td class="py-4 px-6 text-red-400">Heavy Recruiting Overhead</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-medium text-slate-400">Traditional IT Consulting</td>
+                <td class="py-4 px-6 text-amber-400">4-8 Weeks</td>
+                <td class="py-4 px-6 text-slate-400">Mostly Advisory / Slide Decks</td>
+                <td class="py-4 px-6 text-amber-400">High Management Burden</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. TECHNOLOGY STACK -->
+    <section id="tech" class="py-24 bg-slate-900/40 border-y border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-accent mb-2">Interoperability</h2>
+        <p class="text-3xl font-bold text-white sm:text-4xl mb-12">Engineered for Modern Enterprise Stacks</p>
+        
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+          <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-medium text-sm">AWS / GovCloud</div>
+          <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-medium text-sm">Azure Enterprise</div>
+          <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-medium text-sm">GCP / Anthos</div>
+          <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-medium text-sm">Kubernetes / K8s</div>
+          <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-medium text-sm">Snowflake & Databricks</div>
+          <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-medium text-sm">LangChain / Vector DBs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CUSTOMER / BUSINESS BENEFITS -->
+    <section id="benefits" class="py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-500">Business Impact</h2>
+          <p class="mt-2 text-3xl font-bold text-white sm:text-4xl">Measurable Value for Enterprise Growth</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800">
+            <p class="text-4xl font-extrabold text-emerald-400 mb-2">65%</p>
+            <h4 class="text-lg font-bold text-white mb-2">Faster Sales Cycles</h4>
+            <p class="text-slate-400 text-sm">Unblock client-side security reviews and custom integration requirements to close deals faster.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800">
+            <p class="text-4xl font-extrabold text-brand-accent mb-2">100%</p>
+            <h4 class="text-lg font-bold text-white mb-2">Product Focus Protection</h4>
+            <p class="text-slate-400 text-sm">Keep your core R&D teams working on product roadmap features rather than customer-specific bug fixes.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800">
+            <p class="text-4xl font-extrabold text-brand-500 mb-2">3.8x</p>
+            <h4 class="text-lg font-bold text-white mb-2">Higher NRR Acceleration</h4>
+            <p class="text-slate-400 text-sm">Deliver tailored enterprise extensions that expand existing account footprint and annual recurring revenue.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FINAL CTA & CONTACT FORM -->
+    <section id="contact" class="py-24 bg-slate-900/50 border-t border-slate-800">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-white sm:text-4xl">Ready to Unblock Enterprise Revenue?</h2>
+          <p class="text-slate-400 mt-2">Deploy a specialized Forward Deployed Engineering squad to your team in days.</p>
+        </div>
+
+        <form id="leadForm" class="space-y-6 p-8 rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Name</label>
+              <input type="text" required placeholder="Alex Rivera" class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-800 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-500 text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Work Email</label>
+              <input type="email" required placeholder="alex@company.com" class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-800 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-500 text-sm" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Project Brief & Technical Stack</label>
+            <textarea rows="4" required placeholder="Describe your customer deployment challenges and target timeline..." class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-800 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-500 text-sm"></textarea>
+          </div>
+          <button type="submit" class="w-full py-4 bg-brand-600 hover:bg-brand-500 text-white font-semibold rounded-lg shadow-lg shadow-brand-600/25 transition-all">
+            Deploy Engineers Now
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. FOOTER -->
+  <footer class="py-12 border-t border-slate-900 bg-slate-950 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      <div>
+        <span class="text-xl font-bold text-white">Apex<span class="text-brand-500">FDE</span></span>
+        <p class="text-xs text-slate-500 mt-2">Embedded forward deployed engineering squads built for high-growth enterprise SaaS and AI platforms.</p>
+      </div>
+      <div>
+        <p class="font-bold text-white mb-3 text-xs uppercase tracking-wider">Navigation</p>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#about-fde" class="hover:text-white">What is FDE?</a></li>
+          <li><a href="#services" class="hover:text-white">Services</a></li>
+          <li><a href="#workflow" class="hover:text-white">Engagement Lifecycle</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-bold text-white mb-3 text-xs uppercase tracking-wider">Capabilities</p>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#services" class="hover:text-white">Custom Connectors</a></li>
+          <li><a href="#services" class="hover:text-white">Air-Gapped Deployment</a></li>
+          <li><a href="#services" class="hover:text-white">SOC2 & FedRAMP Compliance</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-bold text-white mb-3 text-xs uppercase tracking-wider">Compliance</p>
+        <p class="text-xs text-slate-500">SOC2 Type II Certified | ISO 27001 | HIPAA Compliant Engineering Staff</p>
+      </div>
+    </div>
+    <div class="text-center border-t border-slate-900/60 pt-6 text-xs text-slate-600">
+      &copy; 2026 ApexFDE Services Inc. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
